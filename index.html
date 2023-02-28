@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portal for Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <h1>Portal for Registration</h1>
+<div class="center">
+    <form id="portal-for-registration" style="border: 8%">
+      <div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          placeholder="Enter the name of the applicant"
+          id="name"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your personal E-mail ID" id="email" required />
+      </div>
+      <br />
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          id="password"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required />
+      </div>
+      <br />
+      <div>
+        <label>
+          <input type="checkbox" id="accepted-terms" required />
+          I hereby state that I accept and give consent that my data will be shared with third party agencies for marketing purposes.
+        </label>
+      </div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Entries of the Persons</h2>
+
+    <table id="entries-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Dob</th>
+          <th>Accepted terms?</th>
+        </tr>
+      </thead>
+      <tbody id="entries-table-body"></tbody>
+    </table>
+  </div>
+    
+  </body>
+</html>
