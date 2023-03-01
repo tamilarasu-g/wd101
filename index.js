@@ -1,5 +1,5 @@
 const form = document.getElementById("portal-for-registration");
-const entriesTable = document.getElementById("entries-table-body");
+const entriesTable = document.getElementById("table-body");
 const entries = JSON.parse(localStorage.getItem("entries")) || [];
 for (const entry of entries) {
   const Row = entriesTable.insertRow();
@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
   const acceptedTerms = document.getElementById("accepted-terms").checked;
 
   if (!name || !email || !password || !dob || !acceptedTerms) {
-    alert("Please fill in all the fields.");
+    alert("Please fill in all the fields given below.");
     return false;
   }
 
@@ -42,7 +42,7 @@ form.addEventListener("submit", (event) => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.match(emailRegex)) {
-    alert("Wrong Email Address");
+    alert("Your Email Address is wrong. Please Give Valid or Correct email address");
     return false;
   }
 

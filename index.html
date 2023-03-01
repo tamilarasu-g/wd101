@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portal for Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="index.js"></script>
-    <h1>Portal for Registration</h1>
-<div class="center">
+
+    <img src="milkyway.jpg" alt="Milkyway" style="width: 200px; height: 100px;">
+
+    <div style="display: flex;">
+
+    <h1 style="padding-top: 20%; padding-left: 5%; font-family: Verdana, Geneva, Tahoma, sans-serif;">PORTAL FOR REGISTRATION</h1>
+    <div class="center">
     <form id="portal-for-registration" style="border: 8%">
       <div>
         <label for="name">Name:</label>
@@ -18,11 +23,13 @@
           id="name"
           required
         />
+        <span aria-hidden="true" class="required">*</span>
       </div>
       <br />
       <div>
         <label for="email">Email:</label>
         <input type="email" placeholder="Enter your personal E-mail ID" id="email" required />
+        <span aria-hidden="true" class="required">*</span>
       </div>
       <br />
       <div>
@@ -33,11 +40,13 @@
           id="password"
           required
         />
+        <span aria-hidden="true" class="required">*</span>
       </div>
       <br />
       <div>
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" required />
+        <span aria-hidden="true" class="required">*</span>
       </div>
       <br />
       <div>
@@ -50,9 +59,9 @@
       <button type="submit">Submit</button>
     </form>
 
-    <h2>Entries of the Persons</h2>
+    <h2>Persons Entries List</h2>
 
-    <table id="entries-table">
+    <table id="entries-table-enterted">
       <thead>
         <tr>
           <th>Name</th>
@@ -62,9 +71,12 @@
           <th>Accepted terms?</th>
         </tr>
       </thead>
-      <tbody id="entries-table-body"></tbody>
+      <tbody id="table-body"></tbody>
     </table>
-  </div>
-    
+    <script src="index.js"></script>
+
+    </div>
+
+    </div>
   </body>
 </html>
